@@ -1,10 +1,12 @@
 {
     "items": [
         {
-            "url1": "http://www.cnn.com"
+            "id": "27th April 2023",
+            "url": "http://www.cnn.com"
         },
         {
-            "url2": "http://www.nyt.com"
+            "id": "28th April 2023",
+            "url": "http://www.nyt.com"
         }
     ]
 }
