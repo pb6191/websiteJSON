@@ -1,11 +1,11 @@
 {
     "items": [
         {
-            "id": "abc.27th",
+            "id": "abc:27th",
             "url": "http://www.cnn.com"
         },
         {
-            "id": "abc.28th",
+            "id": "abc:28th",
             "url": "http://www.nyt.com"
         }
     ]
