@@ -1,12 +1,10 @@
 {
-    "items": [
-        {
-            "id": "abc:27th",
+    "items": {
+        "27th": {
             "url": "http://www.cnn.com"
         },
-        {
-            "id": "abc:28th",
+        "28th": {
             "url": "http://www.nyt.com"
         }
-    ]
+    }
 }
