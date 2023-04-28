@@ -28,7 +28,6 @@ openai.api_key = "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"
 # %%
 
 
-
 # %%
 
 # TODO: add remaining questions
@@ -83,12 +82,11 @@ for rep in range(n_reps):
     print(f"Rep {rep + 1} of {n_reps}.")
     dateused = date.today() + relativedelta(days=+rep)
     print(dateused.strftime("%d%b%Y"))
-    
+
     temp = {}
     for question in questions:
 
         messages = [
-
             {
                 "role": "user",
                 "content": questions[question],
@@ -97,12 +95,14 @@ for rep in range(n_reps):
 
         chat_completion = openai.ChatCompletion.create(
             # model="gpt-3.5-turbo", messages=messages, temperature=temperature
-            model="gpt-3.5-turbo", messages=messages, temperature=temperature
+            model="gpt-3.5-turbo",
+            messages=messages,
+            temperature=temperature,
         )
         response = chat_completion.choices[0].message.content
-        
+
         temp[question] = response
-        
+
         time.sleep(21)
     gpt_responses[dateused.strftime("%d%b%Y")] = temp
 
@@ -120,18 +120,17 @@ for rep in range(n_reps):
     print(f"Rep {rep + 1} of {n_reps}.")
     dateused = date.today() + relativedelta(days=+rep)
     print(dateused.strftime("%d%b%Y"))
-    
+
     temp = {}
     for question in questions:
 
-        
-        temp[question] = "https://lqd.buw.mybluehost.me/yoga-"+str(random.randint(1,68))+"/"
-        
+        temp[question] = (
+            "https://lqd.buw.mybluehost.me/yoga-" + str(random.randint(1, 68)) + "/"
+        )
+
     gpt_responses[dateused.strftime("%d%b%Y")] = temp
 
 with open(outputfile, "a+") as f:
     f.write(json.dumps(gpt_responses))
 
 # %%
-
-
