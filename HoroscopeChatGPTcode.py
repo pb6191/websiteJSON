@@ -23,7 +23,7 @@ pd.set_option(
     None,
 )
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 # %%
 
